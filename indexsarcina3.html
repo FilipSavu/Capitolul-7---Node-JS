@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie de imagini</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
+        .gallery li {
+            width: 200px;
+            height: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-
     <ul class="gallery"></ul>
 
     <script src=".\test\sarcina3capitol8.js"></script>

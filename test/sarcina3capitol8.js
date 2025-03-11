@@ -13,17 +13,17 @@ const images = [
     },
   ];
   
-  // select elementul <ul> unde vor fi puse img
-  const gallery = document.querySelector(".gallery");
+  const gallery = document.querySelector('.gallery');
   
-  // crearea unui sir de HTML cu toate imaginile
-  const galleryMarkup = images
-    .map(
-      ({ url, alt }) =>
-        `<li><img src="${url}" alt="${alt}" width="300"></li>`
-    )
-    .join("");
+  // Cream HTML-ul pentru fiecare imagine
+  let galleryHTML = images.map(image => {
+    return `
+      <li>
+        <img src="${image.url}" alt="${image.alt}" />
+      </li>
+    `;
+  }).join('');
   
-  // adaugam imaginile 
-  gallery.insertAdjacentHTML("beforeend", galleryMarkup);
+  // Adăugăm tot HTML-ul generat în galeria de imagini
+  gallery.insertAdjacentHTML('beforeend', galleryHTML);
   
