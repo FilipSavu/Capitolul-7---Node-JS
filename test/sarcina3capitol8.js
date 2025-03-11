@@ -15,7 +15,7 @@ const images = [
   
   const gallery = document.querySelector('.gallery');
   
-  // Cream HTML-ul pentru fiecare imagine
+  // Cream HTML-ul pt fiecare img
   let galleryHTML = images.map(image => {
     return `
       <li>
@@ -24,6 +24,6 @@ const images = [
     `;
   }).join('');
   
-  // Adăugăm tot HTML-ul generat în galeria de imagini
+  // adaugam tot HTML-ul generat 
   gallery.insertAdjacentHTML('beforeend', galleryHTML);
   
